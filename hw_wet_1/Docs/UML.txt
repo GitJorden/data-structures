@@ -1,0 +1,40 @@
++ Void* Init()
++ StatusType AddDataCenter(void* DS, int dataCenterID, int numOfServers) : O(1) 
++ StatusType RemoveDataCenter(void* DS, int dataCenterID) : O(log(number_of_data_centers) + number_of_servers)
++ StatusType RequestServer(void* DS, int dataCenterID, int serverID, int os, int* assignedID) : O(log(number_of_data_centers))
+
++ StatusType FreeServer(void* DS, int dataCenterID, int serverID) : O(log(number_of_data_centers))
++ StatusType GetDataCentersByOs(void* DS, int os, int** dataCenters, int*numOfDataCenters) : O(number_of_data_centers)
+
++ Void Quit(void** DS) : O(number_of_data_centers + number_of_servers)
+
+
+###############################################################
+######################### Data Center #########################
+
+public DataCenter();
+public ~DataCenter();
+
+private NumberOfServers();
+private NumberOfLinuxServers();
+private NumberOfWindowsServers();
+
+private AddServer()????
+
+private GetServerById();
+private InstallLinux();
+private InstallWindows();
+
+private SetServerAsOccupied();
+private IsServerOccupied();
+
+private:
+int Id;
+Lineked List linux;
+Lineked List windows;
+Array Servers;
+
+###############################################################
+###############################################################
+
+
