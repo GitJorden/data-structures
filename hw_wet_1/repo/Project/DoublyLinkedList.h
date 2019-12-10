@@ -36,7 +36,7 @@ namespace hw_wet_1
 		Node<T>& GetNext(Node<T>& node) { return node.next; }
 		Node<T>& GetHead() { return *head; }
 		Node<T>& GetTail() { return *tail; }
-		int GetListsLength() { return this->length; }
+		int GetListLength() { return this->length; }
 
 		void InsertNodeFromHead(Node<T>& node)
 		{
@@ -72,6 +72,25 @@ namespace hw_wet_1
 				node.prev->next = node.next;
 			}
 			delete &node;
+
+			length--;
+		}
+
+		void DeleteNodeAndSaveTheData(Node<T>& node)
+		{
+			if (node.prev == nullptr && node.next != nullptr)
+			{
+				this->head->prev = nullptr;
+			}
+			else if (node.prev != nullptr && node.next == nullptr)
+			{
+				this->tail->prev = nullptr;
+			}
+			else
+			{
+				node.next->prev = node.prev;
+				node.prev->next = node.next;
+			}
 
 			length--;
 		}

@@ -1,19 +1,52 @@
 #include "DataCenter.h"
 
-namespace hw_wet_1 {
+namespace hw_wet_1
+{
 	int DataCenter::NumberOfServers()
 	{
-		return this->numberOfLinuxServers + this->numberOfWindowsServers;
+		return linux->GetListLength() + windows->GetListLength();
 	}
 
-	int DataCenter::NumberOfLinuxServers()
+	int DataCenter::NumberOfLinuxServers() const
 	{
-		return this->numberOfLinuxServers;
+		return linux->GetListLength();
 	}
 
-	int DataCenter::NumberOfWindowsServers()
+	int DataCenter::NumberOfWindowsServers() const
 	{
-		return this->numberOfLinuxServers;
+		return windows->GetListLength();
+	}
+
+	void DataCenter::RemoveServerFromList(Server& s)
+	{
+		Node<Server>& serversIterator = this->linux->GetHead();
+		int length = NumberOfLinuxServers();
+		if (s.GetServerOS() != LINUX)
+		{
+			serversIterator = this->windows->GetHead();
+			length = NumberOfWindowsServers();
+		}
+
+		for (int i = 0; i < length; i++)
+		{
+			if (serversIterator.data.GetServerId() == s.GetServerId())
+			{
+				windows->DeleteNodeAndSaveTheData(serversIterator);
+			}
+			serversIterator = *serversIterator.next;
+		}
+	}
+
+	void DataCenter::AddServerToListOfOS(Server& s)
+	{
+		if (s.GetServerOS() == LINUX)
+		{
+			this->linux->CreateNewNodeFromHead(s);
+		}
+		else
+		{
+			this->windows->CreateNewNodeFromHead(s);
+		}
 	}
 
 	void DataCenter::InstallLinux(Server& s)
@@ -22,10 +55,11 @@ namespace hw_wet_1 {
 		linux->CreateNewNodeFromHead(s);
 
 		Node<Server>& serversIterator = this->windows->GetHead();
-		for (int i = 0; i < this->numberOfWindowsServers; i++) {
+		for (int i = 0; i < this->NumberOfWindowsServers(); i++)
+		{
 			if (serversIterator.data.GetServerId() == s.GetServerId())
 			{
-				linux->DeleteNode(serversIterator);
+				windows->DeleteNode(serversIterator);
 			}
 			serversIterator = *serversIterator.next;
 		}
@@ -37,10 +71,11 @@ namespace hw_wet_1 {
 		windows->CreateNewNodeFromHead(s);
 
 		Node<Server>& serversIterator = this->linux->GetHead();
-		for (int i = 0; i < this->numberOfLinuxServers; i++) {
+		for (int i = 0; i < this->NumberOfLinuxServers(); i++)
+		{
 			if (serversIterator.data.GetServerId() == s.GetServerId())
 			{
-				windows->DeleteNode(serversIterator);
+				linux->DeleteNode(serversIterator);
 			}
 			serversIterator = *serversIterator.next;
 		}
@@ -49,7 +84,8 @@ namespace hw_wet_1 {
 	Server& DataCenter::GetServerById(int serverId)
 	{
 		Node<Server>& s = this->linux->GetHead();
-		for (int i = 0; i < this->numberOfLinuxServers; i++) {
+		for (int i = 0; i < this->NumberOfLinuxServers(); i++)
+		{
 			if (serverId != s.data.GetServerId())
 			{
 				s = *s.next;
@@ -62,7 +98,8 @@ namespace hw_wet_1 {
 		}
 
 		s = windows->GetHead();
-		for (int i = 0; i < this->numberOfWindowsServers; i++) {
+		for (int i = 0; i < this->NumberOfWindowsServers(); i++)
+		{
 			if (serverId != s.data.GetServerId())
 			{
 				s = *s.next;
@@ -77,11 +114,31 @@ namespace hw_wet_1 {
 		return s.data;
 	}
 
+	void DataCenter::ComapreBy(OS os)
+	{
+		this->_compareByLinuxOrWindows = os;
+		if (this->_compareByLinuxOrWindows == WINDOWS)
+		{
+			this->_numberOfServersToComapre = NumberOfWindowsServers();
+		}
+		else
+		{
+			this->_numberOfServersToComapre = NumberOfLinuxServers();
+		}
+	}
+
+	int DataCenter::NumberOfServersToComapre() const
+	{
+		return this->_numberOfServersToComapre;
+	}
+
 	void DataCenter::SetServerAsOccupied(Server& s)
 	{
 		if (!s.IsServerOccupied())
 		{
 			s.ChangeServersOccupationStatus();
 		}
+
+		RemoveServerFromList(s);
 	}
 }

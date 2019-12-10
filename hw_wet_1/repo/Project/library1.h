@@ -28,40 +28,19 @@ extern "C" {
 	} StatusType;
 
 
-	void *Init()
-	{
-		return 0;
-	}
+	void *Init();
 
-	StatusType AddDataCenter(void *DS, int dataCenterID, int numOfServers)
-	{
-		return SUCCESS;
-	}
+	StatusType AddDataCenter(void *DS, int dataCenterID, int numOfServers);
 
-	StatusType RemoveDataCenter(void *DS, int dataCenterID)
-	{
-		return SUCCESS;
-	}
+	StatusType RemoveDataCenter(void *DS, int dataCenterID);
 
-	StatusType RequestServer(void *DS, int dataCenterID, int serverID, int os, int *assignedID)
-	{
-		return SUCCESS;
-	}
+	StatusType RequestServer(void *DS, int dataCenterID, int serverID, int os, int *assignedID);
+	
+	StatusType FreeServer(void *DS, int dataCenterID, int serverID);
 
-	StatusType FreeServer(void *DS, int dataCenterID, int serverID)
-	{
-		return SUCCESS;
-	}
-
-	StatusType GetDataCentersByOS(void *DS, int os, int **dataCenters, int* numOfDataCenters)
-	{
-		return SUCCESS;
-	}
-
-	void Quit(void** DS)
-	{
-		int a = 0;
-	}
+	StatusType GetDataCentersByOS(void *DS, int os, int **dataCenters, int* numOfDataCenters);
+	
+	void Quit(void** DS);
 
 #ifdef __cplusplus
 }
