@@ -1,0 +1,832 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+יבש
+\end_layout
+
+\begin_layout Standard
+מבנה הנתונים הראשי בו עשינו שימוש לחלק השני של התרגיל נקרא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+DataCenterManager
+\lang hebrew
+, והוא עושה שימוש במבנה נתונים משני נוסף הנקרא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+DataCener
+\lang hebrew
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+הסבר על 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+:
+\series default
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+מבנה נתונים זה מנהל את המאפיינים הבאים
+\end_layout
+
+\begin_layout Enumerate
+שתי רשימות מקושרת כפולות גנריות של אובייקטים מטיפוס 
+\begin_inset Formula $Server$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+טיפוס 
+\begin_inset Formula $Server$
+\end_inset
+
+ מוגדר להיות כשרת פיזי של מכונת 
+\begin_inset Formula $Linux$
+\end_inset
+
+ או 
+\begin_inset Formula $Windows$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+רשימה אחת של מכונות 
+\begin_inset Formula $Linux$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+רישמה אחת של מכונות 
+\begin_inset Formula $Windows$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+מערך המכיל את כל השרתים באותו 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ניתן לראות כי הסיבוכיות מקום של מספר השרתים ב-
+\begin_inset Formula $DataCenter$
+\end_inset
+
+ בזמן נתון )כאשר מניחים כי אמורים להיות 
+\begin_inset Formula $n$
+\end_inset
+
+ שרתים בחווה( היא:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f\left(n\right)=n+n=2n=O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+הפונקציונליות אשר 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+ מספק היא:
+\end_layout
+
+\begin_layout Itemize
+בנייה והריסה.
+\end_layout
+
+\begin_layout Itemize
+התקנת שרתים שונים 
+\begin_inset Formula $Linux$
+\end_inset
+
+ או 
+\begin_inset Formula $Windows$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+בקשה של שרת לשימוש.
+\end_layout
+
+\begin_layout Itemize
+בקשה לפינוי שרת.
+\end_layout
+
+\begin_layout Itemize
+קבלת שרת על ידי מזהה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+הסבר על 
+\begin_inset Formula $DataCenterManager$
+\end_inset
+
+:
+\series default
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+מבנה נתונים זה מנהל את המאפיינים הבאים
+\end_layout
+
+\begin_layout Enumerate
+שתי עצי 
+\begin_inset Formula $AVL$
+\end_inset
+
+ של אובייקטים מטיפוס 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+עץ המסודר לפי מספר שרתי ה-
+\begin_inset Formula $Linux$
+\end_inset
+
+ בכל 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ועץ המסודר לפי מספר שרתי ה-
+\begin_inset Formula $Windows$
+\end_inset
+
+ בכל 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\bar under
+הערה:
+\bar default
+ אם באחד העצים קיים שוויון ב
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+מספר מערכות ההפעלה המותקנות על שני 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+ שונים העץ ימיין אותם על פי ה- 
+\begin_inset Formula $ID$
+\end_inset
+
+ שלהם.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+ניתן לראות כי אם נסמן את מספר חוות השרתים בנקודת זמן ב-
+\begin_inset Formula $n$
+\end_inset
+
+ ואת החווה עם מספר השרתים הרב ביותר ב-
+\begin_inset Formula $k$
+\end_inset
+
+.
+ אז הסיבוכיות מקום שלנו תיהיה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f\left(n,k\right)=2\cdot k\cdot n=O\left(k\cdot n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+הפונקציונליות אשר 
+\begin_inset Formula $DataCenterManager$
+\end_inset
+
+ מספק היא:
+\end_layout
+
+\begin_layout Itemize
+בנייה והריסה של המבנה.
+\end_layout
+
+\begin_layout Itemize
+הוספת 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הסרת 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+בקשה של שרת לבצע בו שימוש.
+\end_layout
+
+\begin_layout Itemize
+לפנות שרת משימוש.
+\end_layout
+
+\begin_layout Itemize
+החזרת כל המזהים של חוות השרתים בצורה ממוינת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+אופן מימוש הפעולות הנדרשות:
+\end_layout
+
+\begin_layout Enumerate
+
+\bar under
+\begin_inset Formula $Init$
+\end_inset
+
+:
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+מקצה זיכרון למבנה מטיפוס 
+\begin_inset Formula $DataCenterManager$
+\end_inset
+
+ ומחזירה מצביע אליו.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סיבוכיות זמן
+\bar default
+ הינה 
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\bar under
+\begin_inset Formula $AddDataCenter$
+\end_inset
+
+:
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+הפעולה יוצרת מבנה חדש מטיפוס 
+\begin_inset Formula $DataCenter$
+\end_inset
+
+ לפי 
+\begin_inset Formula $ID$
+\end_inset
+
+ ומספר שרתים אשר הוא מנהל.
+ לאחר מכן מכניסה אותה ל-
+\begin_inset Formula $DataCenterManager$
+\end_inset
+
+ המבוקש ושם החווה ממוינת בשני העצים של חוות השרתים.
+ בהנחה שקיימים סה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $n$
+\end_inset
+
+-חוות שרתים ו-
+\begin_inset Formula $m$
+\end_inset
+
+ שרתים בחווה החדשה.
+ נקבל כי מיון בעצים עובד בסיבוכיות זמן של 
+\begin_inset Formula $O\left(log\left(n\right)\right)$
+\end_inset
+
+ והכנסת 
+\begin_inset Formula $m$
+\end_inset
+
+-השרתים לחווה לוקח 
+\begin_inset Formula $O\left(m\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סיבוכיות זמן
+\bar default
+ הינה 
+\begin_inset Formula $O\left(log\left(n\right)+m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\bar under
+\begin_inset Formula $DeleteDataCenter$
+\end_inset
+
+:
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+הפעולה מחפשת בעץ את השרת ברצונה למחוק ופעולה זו לוקח 
+\begin_inset Formula $O\left(log\left(n\right)\right)$
+\end_inset
+
+ כאשר יש לנו סה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $n$
+\end_inset
+
+-חוות שרתים.
+ בנוסף מחיקת כל השרתים בחווה לוקחת 
+\begin_inset Formula $O\left(m\right)$
+\end_inset
+
+ כאשר קיימים 
+\begin_inset Formula $m$
+\end_inset
+
+-שרתים בחווה.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סיבוכיות זמן
+\bar default
+ הינה 
+\begin_inset Formula $O\left(log\left(n\right)+m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\bar under
+\begin_inset Formula $RequestServer$
+\end_inset
+
+:
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+הפעולה מבקשת שרת שתוכל כדי לאייש אותו.
+\begin_inset Newline newline
+\end_inset
+
+חיפוש חוות השרתים המבוקשת לוקחת 
+\begin_inset Formula $O\left(log\left(n\right)\right)$
+\end_inset
+
+ כאשר יש 
+\begin_inset Formula $n$
+\end_inset
+
+-חוות שרתים.
+\begin_inset Newline newline
+\end_inset
+
+מציאת השרת המבוקש מתבצע ב-
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ כי השרתים שמורים בחווה במערך והם ממויינים לפי ה-
+\begin_inset Formula $ID$
+\end_inset
+
+ שלהם.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סיבוכיות זמן
+\bar default
+ הינה 
+\begin_inset Formula $O\left(log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\bar under
+\begin_inset Formula $FreeServer$
+\end_inset
+
+:
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+הפעולה מבקשת לפנות שרת ספציפי.
+\begin_inset Newline newline
+\end_inset
+
+חיפוש חוות השרתים המבוקשת לוקחת 
+\begin_inset Formula $O\left(log\left(n\right)\right)$
+\end_inset
+
+ כאשר יש 
+\begin_inset Formula $n$
+\end_inset
+
+-חוות שרתים.
+\begin_inset Newline newline
+\end_inset
+
+מציאת השרת המבוקש מתבצע ב-
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ כי השרתים שמורים בחווה במערך והם ממויינים לפי ה-
+\begin_inset Formula $ID$
+\end_inset
+
+ שלהם.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סיבוכיות זמן
+\bar default
+ הינה 
+\begin_inset Formula $O\left(log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\bar under
+\begin_inset Formula $GetDataCentersByOS$
+\end_inset
+
+:
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+הפעולה מבקשת לקבל את כל המזהים של חוות השרתים ממוינים בסדר יורד לפי מספר
+ השרתים מסוג 
+\begin_inset Formula $OS$
+\end_inset
+
+ שיש בחווה.
+\begin_inset Newline newline
+\end_inset
+
+ובמקרה של שוויון יש למיין מיון משני על פי המזהים בסדר עולה.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $DataCenterManager$
+\end_inset
+
+ ממיין את חוות השרתים ברגע הכנסתם למערכת לפי דרישות פעולה זו כאשר כל עץ
+ מתאים ל
+\begin_inset Formula $OS$
+\end_inset
+
+ מבוקשת.
+\begin_inset Newline newline
+\end_inset
+
+לכן החזרת כל חוות השרתים ממויינים תתבצע ב-
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+ כאשר יש 
+\begin_inset Formula $n$
+\end_inset
+
+-חוות שרתים.
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סיבוכיות זמן
+\bar default
+ הינה 
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\bar under
+\begin_inset Formula $Quit$
+\end_inset
+
+:
+\bar default
+
+\begin_inset Newline newline
+\end_inset
+
+הפעולה משחררת את 
+\begin_inset Formula $DataCenterManager$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+שחרור כל השרתים מחווה ספציפית מקיים 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $k$
+\end_inset
+
+-שרתים.
+\begin_inset Newline newline
+\end_inset
+
+שחרור כל חוות השרתים מקיים 
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $n$
+\end_inset
+
+-חוות שרתים.
+\begin_inset Newline newline
+\end_inset
+
+סה
+\begin_inset Quotes erd
+\end_inset
+
+כ מספר השרתים הוא 
+\begin_inset Formula $m=n\cdot k$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סיבוכיות זמן
+\bar default
+ הינה 
+\begin_inset Formula $O\left(n+m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+הערה:
+\bar default
+ מתבצע בכל פעולה בדיקת קלט בסיבוכיות זמן של 
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
